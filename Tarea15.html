@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Suma de Matrices</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost15.css">
+   </head>
+   <body>
+      <center><h1>Suma de Matrices</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Suma de Matrices</strong></h2>
+			    
+				
+     <p class="texto3">
+	     Programa en JAVA y RUBY que calcule la suma de 2 matrices que ingrese el usuario.
+	     
+	 </p>
+			<pre> 
+<p class="p1"><em><strong>JAVA</strong><br>
+import javax.swing.JOptionPane;
+public class Tarea_15{
+public static void main(String[] args){
+		
+		String entrada;
+		String game="";
+		int respuesta;
+		JOptionPane.showMessageDialog(null,"Suma de Matrices.");
+		do{
+		int a[][],b[][],c[][],i,j,fila,cola,filb,colb,resultado;
+		
+       
+ 
+		entrada=JOptionPane.showInputDialog("Numero de Filas de la Matriz A: ");
+		fila=Integer.parseInt(entrada);
+		entrada=JOptionPane.showInputDialog("Numero de Columnas de la Matriz A: ");
+		cola=Integer.parseInt(entrada);
+		a=new int[fila][cola];
+		for(i=0;i&lt;fila;i++){ 
+			for(j=0;j&lt;cola;j++){
+			entrada=JOptionPane.showInputDialog("Ingrese Elemento de la Matriz A de la Posicion ["+i+"]["+j+"]: ");
+			a[i][j]=Integer.parseInt(entrada);
+		}
+		}
+			
+		entrada=JOptionPane.showInputDialog("Numero de Filas de la Matriz B: ");
+		filb=Integer.parseInt(entrada);
+		entrada=JOptionPane.showInputDialog("Numero de Columnas de la Matriz B: ");
+		colb=Integer.parseInt(entrada);
+		b=new int[filb][colb];
+		for(i=0;i&lt;filb;i++){
+			for(j=0;j&lt;colb;j++){
+			entrada=JOptionPane.showInputDialog("Ingrese Elemento de la Matriz B de la Posicion ["+i+"]["+j+"]: ");
+			b[i][j]=Integer.parseInt(entrada);
+			}
+		}
+		
+		c=new int[fila][colb];
+		if(fila==filb && cola==colb){
+			for(i=0;i&lt;fila;i++){
+				for(j=0;j&lt;cola;j++){
+					c[i][j]=a[i][j]+b[i][j];
+					
+				}
+			}
+		
+		String letrero="";
+		for(i=0;i&lt;fila;i++){
+				for(j=0;j&lt;cola;j++){
+					letrero=letrero+"[ "+c[i][j]+" ]   ";
+				}
+				letrero=letrero+"\n";
+			}
+			
+		JOptionPane.showMessageDialog(null,"La Suma de las Matrices A y B es igual: \n"+letrero);
+		
+        	}else{
+			JOptionPane.showMessageDialog(null,"No es Posible Hacer la Suma Porque son Matrices Diferentes");
+		}
+		
+		     game="";
+	         game=game+"1. Volver realizar\n";
+	         game=game+"2. Finalizar\n";
+	         game=JOptionPane.showInputDialog(game+"Que desea realizar: ");
+	         respuesta=Integer.parseInt(game);
+	         }while(respuesta==1);
+		
+}//fin de main
+}//fin de clase
+			 </pre>
+				 </em>
+		 </p>
+<pre>
+<p class="p2"><strong>RUBY</strong><br>
+puts ("Suma de Matrices.")
+begin
+
+print ("Ingrese el numero de filas de la Matriz A: ")
+    fila=gets().to_i
+print ("Ingrese el numero de columnas de la Matriz A: ")
+    cola=gets().to_i
+
+a=Array.new(fila){Array.new(cola)}
+
+    for i in(0...fila)
+       for j in(0...cola)
+	      print ("Matriz A - Ingresa el valor de la posicion #{[i]}#{[j]}: ")
+	         a[i][j]=gets().to_i
+	   end
+    end
+
+
+print ("Ingresa el numero de filas de la Matriz B: ")
+    filb=gets().to_i
+print ("Ingresa el numero de columnas de la matriz B: ")
+    colb=gets().to_i
+
+   
+
+b=Array.new(filb){Array.new(colb)}
+
+    for i in(0...filb) 
+       for j in(0...colb)
+	      print ("Matriz B - Ingresa el valor de la posicion #{[i]}#{[j]}: ")
+		     b[i][j]=gets().to_i
+	   end
+    end	  
+
+c=Array.new(fila){Array.new(colb)}
+    if(fila==filb && cola==colb)
+       for i in(0...fila)
+	      for j in(0...cola)
+		     c[i][j]=a[i][j]+b[i][j]
+		  end
+	   end
+    end
+		 
+   letrero=""
+       for i in(0...fila)
+           for j in(0...cola)
+	           letrero=letrero+c[i][j].to_s+"  "
+	       end
+	       letrero=letrero+"\n"
+       end
+  
+   puts ("La suma de las matrices A y B es:\n#{letrero}")
+
+       print "\nDesea realizarlo otra vez. \n\tOpcion 1. Si:\n\tOpcion 2. No:  "
+       respuesta=gets().to_i
+           end while respuesta==1
+   			 
+				</pre>     
+			 
+			
+			</p>
+			 </div>   
+			 <center>
+			   
+				<a class="per" href="Tarea14.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+			    <a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea16.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>

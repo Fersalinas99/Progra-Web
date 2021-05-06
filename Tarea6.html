@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>HASKELL</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost6.css">
+   </head>
+   <body>
+      <center><h1>HASKELL</h1></center>
+   
+         <div class="texto2">
+             <img class="img7" src="imagenes/t6.png"><h2><strong>HASKELL</strong></h2>
+			    <center>
+				
+     <p class="texto3">
+	         
+			 Es un lenguaje polimórficamente tipificado, perezoso, puramente funcional , muy diferente a la mayoría de los otros lenguajes de programación. El lenguaje recibe su nombre en honor a Haskell Brooks Curry, por sus trabajos en lógica matemática que sirvieron como fundamento para el desarrollo de lenguajes funcionales. Haskell está basado en el cálculo lambda , por lo tanto el símbolo lambda es usado como logo. Escribir programas grandes que funcionen correctamente es difícil y costoso. Mantener esos programas es aún más difícil y costoso tambien. Los lenguajes de programación funcional, tales como Haskell, pueden hacerlo mucho más fácil y económicos.
+	          
+	 </p>
+			 
+		 <p class="p1"><strong>SÍMBOLOS Y SINTAXIS</strong><br>
+		     <em>secsToWeeks secs = let perMinute = 60<br>
+             perHour = 60 * perMinute<br>
+             perDay = 24 * perHour<br>
+             perWeek = 7 * perDay<br>
+             in secs / perWeek<br>
+			 La expresión let define nombres temporales. (Esto es usando layout otra vez. Se puede usar {llaves}, y separar los nombres con punto y comas, si se prefiere).<br>
+
+             classify age = case age of 0 -> "newborn"<br>
+             1 -> "infant"<br>
+             2 -> "toddler"<br>
+             _ -> "senior citizen"<br>
+
+             La expresión case produce ramas de decisión. La etiqueta especial _ significa "cualquier otra cosa".</em>
+			 
+				 
+		 </p>
+			 
+			     
+		 <p class="p7"><strong>REQUISITOS PARA PROGRAMAR</strong><br>
+		 Todas las siguientes implementaciones cumplen en su totalidad, o casi en su totalidad, con los estándares de Haskell 98 y son distribuidas bajo licencias Open Source. No se conocen implementaciones comerciales del lenguaje.<br>
+         Hugs: es un intérprete y ofrece una compilación rápida de los programas y un tiempo razonable de ejecución. También viene con una biblioteca gráfica muy simple, lo que lo hace adecuado para quienes lo están aprendiendo. Sin embargo no es una implementación a despreciar, es una de las más livianas y compatibles.<br>
+         GHC: "Glasgow Haskell Compiler" compila a código nativo en una variedad de arquitecturas y puede también compilar a C. Es, probablemente, uno de los compiladores más populares e incluso tiene unas cuantas bibliotecas (por ejemplo OpenGL) que, aunque muy útiles, sólo funcionan bajo GHC.<br>
+         nhc98: es otro compilador con un mejor tiempo de ejecución que Hugs. Esta implementación se enfocó a minimizar la utilización de la memoria convirtiéndola en una buena opción para arquitecturas lentas o antiguas.<br>
+         HBC: es otro compilador a código nativo de Haskell. Si bien no ha sido actualizado en el último tiempo sigue siendo bastante útil.<br>
+         Helium: es un nuevo dialecto de Haskell. Se centró en ser muy fácil de aprender; por ello, no incluye soporte para todo el estándar de Haskell, haciendo que no sea totalmente compatible.
+
+		 </p>
+				 
+		 
+			 
+		 <p class="p8"><strong>EJEMPLO DE PROGRAMA</strong><br>
+		 Sumatoria de Elementos de una Lista de Enteros<br>
+         <em>--Sumar elementos de una lista<br>
+         sumar :: [Int] -> Int<br>
+         sumar [] = 0<br>
+         sumar (x:xs) = x+sumar(xs)</em>
+		     
+			 
+		 </p>
+			 
+			 
+			 
+			 
+			 
+			 </center>
+			
+			</p>
+			 </div>   
+			 <center>
+				<a class="per" href="Tarea5.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+				<a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea7.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>

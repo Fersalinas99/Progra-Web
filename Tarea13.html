@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Busqueda en Vector</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost13.css">
+   </head>
+   <body>
+      <center><h1>Busqueda en Vector</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Busqueda en Vector</strong></h2>
+			   
+				
+     <p class="texto3">
+	         
+			 Programa en JAVA y RUBY que realice una busqueda de un numero en un vector, mostrando solamente un mensaje indicando cuantas veces aparecio el número, ademas de imprimir el vector.
+			 
+	 </p>
+			 
+		 <p class="p1">
+		 <em><strong>JAVA</strong><br>
+<br>import javax.swing.JOptionPane;
+<br>public class Tarea13{
+<br>public static void main (String[]args){
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+String entrada;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+int i,n,x=10000,b,j,cont=0;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+int arre[]=new int[x];
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+String letrero="";
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+String buscar="";
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+entrada=JOptionPane.showInputDialog("Cuantos numeros desea ingresar:");
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+n=Integer.parseInt(entrada);
+	   
+	   
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+for(i=0;i n;i++){
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 
+entrada=JOptionPane.showInputDialog("Ingresar el numero de la posicion "+(i+1));
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	     
+arre[i]=Integer.parseInt(entrada);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+for(i=0;i&lt;n;i++){
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+letrero=letrero+"["+arre[i]+"]";
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+JOptionPane.showMessageDialog(null,"Haz completado los valores");
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+entrada=JOptionPane.showInputDialog("Valor a buscar: ");
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+x=Integer.parseInt(entrada);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+for(i=0;i&lt;n;i++){  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 
+if(x==arre[i]){
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+cont=cont+1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 
+}
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+JOptionPane.showMessageDialog(null,"El numero "+x+" aparece "+ cont+" veces");<br>
+	 
+<br>} //Fin de main
+<br>} //Fin clase
+				 </em>
+			 
+				 
+		 </p>
+<pre> 
+<p class="p2"><em><strong>RUBY</strong>
+
+puts ("Busqueda de vector")
+
+begin
+
+print ("Cuantos numeros desea ingresar: ")
+    n=gets().to_i
+a=Array.new(n)
+
+for i in(0...n)
+    print ("Ingresar un numero: ")
+    a[i]=gets().to_i
+end 
+
+letrero="A=["
+    for i in(0...n)
+    end
+    letrero=letrero+"]"
+
+cont=0
+    puts ("Haz completado los valores")
+    print ("Ingresa el valor a buscar: ")
+        x=gets().to_i
+        for i in(0...n)   
+            if (x==a[i])
+               cont+=1
+            end
+        end
+        
+		print ("\nEl numero #{x} aparece #{cont} veces.\n")
+   
+      print "\nDesea realizarlo otra vez. \n1.Si:\n2.No: "
+      respuesta=gets().to_i
+end while respuesta==1			
+			</pre>	 
+			</em></p>
+			 </div>   
+			 <center>
+			   
+				<a class="per" href="Tarea12.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+			   <a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea14.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>

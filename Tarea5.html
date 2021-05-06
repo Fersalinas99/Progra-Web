@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Scheme</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost5.css">
+   </head>
+   <body>
+      <center><h1>Scheme</h1></center>
+   
+         <div class="texto2">
+             <img class="img7" src="imagenes/t5.jpg"><h2><strong>Scheme</strong></h2>
+			    <center>
+				
+     <p class="texto3">
+	 
+	     Scheme es un dialecto de Lisp, es un lenguaje interpretado, muy expresivo y soporta varios paradigmas. Fue desarrollado por Guy L. Steele y Gerald Jay Sussman en la década de los setenta e introducido en el mundo académico a través de una serie de artículos conocidos como los Lambda Papers de Sussman y Steele.<br>
+		 Scheme es un lenguaje de programación que surgió en los laboratorios del MIT en 1975, cuando Guy L. Steele y Gerarld J. Sussman buscaban un lenguaje con una semántica muy clara y sencilla. Pensaban que los lenguajes no se deberían desarrollar añadiendo muchas características, sino quitando las debilidades y las limitaciones que hacen que las características adicionales parezcan necesarias.<br>
+		 Estuvo influenciado por el cálculo lambda. El desarrollo de Scheme ha sido lento, ya que la gente que lo estandarizó es muy conservadora en cuanto a añadirle nuevas características porque la calidad ha sido siempre más importante que la utilidad empresarial. Por eso Scheme es considerado como uno de los lenguajes mejor diseñados de propósito general.
+			    
+	 </p>
+			 
+		 <p class="p1"><strong>SÍMBOLOS Y SINTAXIS</strong><br>
+		     Scheme posee una sintaxis reducida comparada a otros lenguajes. Utiliza la notación prefija. Por ejemplo, si se desea realizar la suma 1+1, se debe programar la siguiente instrucción:<br>
+			 <em>(+ 1 1)</em><br><br>
+			 Los paréntesis son obligatorios, ya que separan las instrucciones que serán evaluadas por el intérprete. Para realizar comentarios dentro del código, se utiliza el ";", así se marca que toda la línea será de comentario.<br>Ejemplo:<br>
+			 ;Esta línea es un comentario, y la orden de abajo es ejecutada<br> 
+			 <em>(+ 1 1)</em>
+				 
+		 </p>
+			 
+			     <p class="p2">
+				 
+				     Las variables son dinámicamente tipadas. Dicho de otra forma, no se debe especificar lo que se va a guardar dentro de la misma. Las variables globales se nombran con la instrucción (define nombre valor)<br>
+					 Por ejemplo,<br>
+					 <em>(define variable 5)</em><br> 
+					 Por otro lado, las variables locales se definen con la instrucción ( let variables función). Por ejemplo: sumar dos números guardados en una variable local<br>
+					 <em>(let</em> <br>
+					 ;variables de la operación <br>
+					 <em>((numero1 5) <br>
+					 (numero2 7))</em> <br>
+					 ;instrucción que suma los números, es decir, la función <br>
+					 <em>(+ numero1 numer2))</em>
+				 
+				     
+				 </p>
+			    
+				 <p class="p3">
+				     
+					 Otros <strong>tipos de datos</strong> en Scheme son los enteros, racionales, reales, complejos, símbolos, cadenas, y puertos, listas asociativas, tablas hash, vectores, arrays y estructuras.<br>
+					 La mayoría de implementaciones proporciona lo que se conoce como una torre numérica completa, así como aritmética exacta e inexacta.<br>
+					 Los valores booleanos se representan mediante los símbolos #t y #f. En realidad, cualquier valor distinto de #f (incluyendo la lista vacía) se interpreta como 'verdadero' en un contexto adecuado, mientras que en otros dialectos de Lisp la lista vacía es interpretada como el valor booleano falso.
+					 Los símbolos pueden ser definidos de varias maneras, siendo:<br>
+					 <em>'symbol<br>
+					 (string->symbol "symbol")</em><br>
+				 
+				     
+				 </p>
+				 
+				 <p class="p4">
+				     
+					 En Scheme existe la <strong>instrucción cond</strong>, con la cual se pueden revisar si se cumplen o no con requerimientos para realizar dicha funcion. Su sintaxis es:<br>
+					 <em>(cond <br>
+					 ((condición) (función-salida)<br> 
+					 .... <br>
+					 .... <br>
+					 .... <br>
+					 (else (función-salida))</em> <br>
+				 
+				 </p>
+			
+			     
+		     
+			     <p class="p5">
+				 
+				     Los <strong>bucles</strong> en Scheme suelen tomar la forma de una recursión final o tail recursion en inglés. Este tipo de recursión es preferido porque dispensa la acumulación de tramas en la pila de llamadas y su subsecuente desbordamiento. El estándar exige a las implementaciones optimizar llamadas en posición de recursión final para generar código equivalente a un ciclo en lenguajes imperativos. Un ejemplo clásico es la función factorial, que puede definirse sin recursión final como:<br>
+					 <em>(define (factorial n)<br>
+					 (cond ((= n 0) 1)<br>
+					 (else (* n (factorial (- n 1))))))<br>
+					 (factorial 5)<br>
+					 ;; => 120</em>
+				 
+				     
+				 </p>
+				 
+				 
+			 
+	     <p class="p6"><strong>ESQUELETO</strong><br><br>
+		     ; función que suma dos números agregados como argumento <br>
+			 <em>(define (suma num1 num2)</em> <br>
+			 ; implementación del let anterior, aunque no es estrictamente necesario<br> 
+			 <em>(let </em><br>
+			 ;variables de la operación <br>
+			 <em>((numero1 num1) <br>
+			 (numero2 num2)) </em><br>
+			 ; instrucción que suma los números, es decir, la función<br> 
+			 <em>(+ numero1 numero2)) </em>
+				 
+		 </p>
+			 
+		 
+				 
+		 <p class="p8"><strong>PARADIGMA</strong><br>
+		   
+		     Si bien es cierto es funcional, puede ser utilizado para simular otros paradigmas (como el conocido paradigma orientado a objetos utlizado en lenguajes como java o python).
+			    
+	     </p>
+			 
+		 <p class="p8"><strong>EJEMPLO DE PROGRAMA</strong><br>
+		 
+		     <em>(define x 7)<br>
+			 (define y (* x x))<br>
+			 (define suma +)<br>
+			 (define pitagoras x y)<br>
+			 (sqrt (+ (sqr x) (sqr y))))<br>
+			 (define (es-par n)<br>
+			 (define (par?)<br>
+			 (if (= (modulo n 2) 0) #t #f))<br>
+			 (if (par?)<br>
+			 (print "es par")<br>
+			 (prntt "es impar")))</em>
+			 
+		 </p>
+			 
+			 </center>
+			
+			</p>
+			 </div>   
+			 <center>
+			   <a class="per" href="Tarea4.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+				<a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea6.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>

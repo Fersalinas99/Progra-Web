@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Multiplicacion de Matrices</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost16.css">
+   </head>
+   <body>
+      <center><h1>Multiplicacion de Matrices</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Multiplicacion de Matrices</strong></h2>
+			    
+				
+     <p class="texto3">
+	     Programa en JAVA y RUBY que calcule la multiplicacion de 2 matrices que ingrese el usuario.
+	 </p>
+			<pre> 
+<p class="p1"><em><strong>JAVA</strong><br>
+import javax.swing.JOptionPane;
+public class Tarea_16{
+public static void main(String[] args){
+		
+		String entrada;
+		String game="";
+		int respuesta;
+		JOptionPane.showMessageDialog(null,"Multiplicacion de Matrices.");
+		do{
+		int a[][],b[][],c[][],i,j,fila,cola,filb,colb,resultado,k;
+		
+
+		entrada=JOptionPane.showInputDialog("Numero de Filas de la Matriz A:");
+		fila=Integer.parseInt(entrada);
+		entrada=JOptionPane.showInputDialog("Numero de Columnas de la Matriz A:");
+		cola=Integer.parseInt(entrada);
+		a=new int[fila][cola];
+		for(i=0;i&lt;fila;i++){ 
+			for(j=0;j&lt;cola;j++){
+			entrada=JOptionPane.showInputDialog("Ingrese Elemento de la Matriz A de la Posicion ["+i+"]["+j+"]:");
+			a[i][j]=Integer.parseInt(entrada);
+		}
+		}
+			
+		entrada=JOptionPane.showInputDialog("Numero de Filas de la Matriz B:");
+		filb=Integer.parseInt(entrada);
+		entrada=JOptionPane.showInputDialog("Numero de Columnas de la Matriz B:");
+		colb=Integer.parseInt(entrada);
+		b=new int[filb][colb];
+		for(i=0;i&lt;filb;i++){
+			for(j=0;j&lt;colb;j++){
+			entrada=JOptionPane.showInputDialog("Ingrese Elemento de la Matriz B de la Posicion ["+i+"]["+j+"]:");
+			b[i][j]=Integer.parseInt(entrada);
+			}
+		}
+		
+		c=new int[fila][colb];
+		if(cola==filb){
+			for(i=0;i&lt;fila;i++){
+				for(j=0;j&lt;colb;j++){
+					for(k=0;k&lt;cola;k++){
+						c[i][j]+=a[i][k]*b[k][j];
+					}
+				}
+			}
+		
+		String letrero="";
+		for(i=0;i&lt;fila;i++){
+				for(j=0;j&lt;colb;j++){
+					
+					letrero=letrero+"[ "+c[i][j]+" ]   ";
+					}
+				letrero=letrero+"\n";
+			}
+			
+		JOptionPane.showMessageDialog(null,"La Multiplicacion de las Matrices A y B es igual: \n"+letrero);
+		
+        	}else{
+			JOptionPane.showMessageDialog(null,"No es Posible Hacer la Multiplicacion Porque la Columna de la Matriz A 
+			es diferentes a la Fila de la Matriz B");
+		}
+		
+		     game="";
+	         game=game+"1. Volver realizar\n";
+	         game=game+"2. Finalizar\n";
+	         game=JOptionPane.showInputDialog(game+"Que desea realizar: ");
+	         respuesta=Integer.parseInt(game);
+	         }while(respuesta==1);
+		
+}//fin de main
+}//fin de clase
+			 </pre>
+				 </em>
+		 </p>
+<pre>
+<p class="p2"><strong>RUBY</strong>
+puts ("Multiplicacion de Matrices")
+
+begin
+
+print ("Ingrese el numero de filas de las matrices: ")
+    fil=gets().to_i
+print ("Ingrese el numero de columnas de las matrices: ")
+    col=gets().to_i
+
+    if(fil != col)
+        puts ("Debe ser matriz regular")
+
+    else
+
+a=Array.new(fil){Array.new(col)}
+   
+    puts ("Matriz A")
+       for i in(0...fil)
+	      for j in(0...col)
+		     print ("Ingrese el valor de la posicion #{[i]}#{[j]}:  ")
+			 a[i][j]=gets().to_i
+		  end
+       end
+	  
+b=Array.new(fil){Array.new(col)}
+      
+    puts ("Matriz B")
+       for i in(0...fil)
+	      for j in(0...col)
+		     print ("Ingrese el valor de la posicion #{[i]}#{[j]}:  ")
+		     b[i][j]=gets().to_i
+		  end
+	   end
+	  
+c=Array.new(fil){Array.new(col)}
+
+       for i in(0...fil)
+	      for j in(0...col)
+		     c[i][j]=0
+			 for k in(0...col)
+			    c[i][j]+=(a[i][k]*b[k][j])
+			 end
+		  end
+	   end
+	   
+	   
+letrero=""
+    for i in(0...fil)
+       for j in(0...col)
+	      letrero=letrero+c[i][j].to_s+"  "
+	   end
+	   letrero=letrero+"\n"
+    end
+    
+	puts ("La multiplicarion de las matrices A y B es:\n#{letrero}")
+    
+	end
+    
+ 	  print "\nDesea realizarlo otra vez. \n\tOpcion 1. Si:\n\tOpcion 2. No:  "
+      respuesta=gets().to_i
+end while respuesta==1
+	  
+				</pre>     
+			 
+			
+			</p>
+			 </div>   
+			 <center>
+			   
+				
+				<a class="per" href="Tarea15.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+			    <a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+			  	<a class="per" href="Biografia.html">Personales</a>
+				
+			 </center>
+   
+   </body>
+</html>

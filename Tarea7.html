@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Lenguaje R</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost7.css">
+   </head>
+   <body>
+      <center><h1>Lenguaje R</h1></center>
+   
+         <div class="texto2">
+             <img class="img7" src="imagenes/t7.jpg"><h2><strong>Lenguaje R</strong></h2>
+			    <center>
+				
+     <p class="texto3">
+	         
+			 Es un lenguaje polimórficamente tipificado, perezoso, puramente funcional , muy diferente a la mayoría de los otros lenguajes de programación. El lenguaje recibe su nombre en honor a Haskell Brooks Curry, por sus trabajos en lógica matemática que sirvieron como fundamento para el desarrollo de lenguajes funcionales. Haskell está basado en el cálculo lambda , por lo tanto el símbolo lambda es usado como logo. Escribir programas grandes que funcionen correctamente es difícil y costoso. Mantener esos programas es aún más difícil y costoso tambien. Los lenguajes de programación funcional, tales como Haskell, pueden hacerlo mucho más fácil y económicos.
+	          
+	 </p>
+			 
+		 <p class="p1"><strong>SÍMBOLOS Y SINTAXIS</strong><br>
+		     R proporciona un amplio abanico de herramientas estadísticas (modelos lineales y no lineales, tests estadísticos, análisis de series temporales, algoritmos de clasificación y agrupamiento, etc.) y gráficas Una Herramienta Util.<br>
+             Al igual que S, se trata de un lenguaje de programación, lo que permite que los usuarios lo extiendan definiendo sus propias funciones. De hecho, gran parte de las funciones de R están escritas en el mismo R, aunque para algoritmos computacionalmente exigentes es posible desarrollar bibliotecas en C, C++ o Fortran que se cargan dinámicamente. Los usuarios más avanzados pueden también manipular los objetos de R directamente desde código desarrollado en C. R también puede extenderse a través de paquetes desarrollados por su comunidad de usuarios.<br>
+             R hereda de S su orientación a objetos. La tarea de extender R se ve facilitada por su permisiva política de lexical scoping.<br>
+             Además, R puede integrarse con distintas bases de datos y existen bibliotecas que facilitan su utilización desde lenguajes de programación interpretados como Perl y Python.<br>
+             Otra de las características de R es su capacidad gráfica, que permite generar gráficos con alta calidad. R posee su propio formato para la documentación basado en LaTeX.<br>
+             R también puede usarse como herramienta de cálculo numérico, campo en el que puede ser tan eficaz como otras herramientas específicas tales como GNU Octave y su equivalente privativo: MATLAB. Se ha desarrollado una interfaz, RWeka para interactuar con Weka que permite leer y escribir ficheros en el formato arff y enriquecer R con los algoritmos de minería de datos de dicha plataforma.<br>
+
+			 
+				 
+		 </p>
+			 
+			    
+			 
+		 <p class="p7"><strong>REQUISITOS PARA PROGRAMAR</strong><br>
+		 Interfaces gráficas:<br>
+-JGR o Java GUI for R, una terminal de R multiplataforma basada en Java.<br>
+-R Commander (Rcmdr), una interfaz gráfica multiplataforma basada en tcltk.<br>
+-RExcel, que permite usar R y Rcmdr desde Microsoft Excel.<br>
+-rggobi, una interfaz a GGobi para visualización.<br>
+-RKWard, basado en KDE.<br>
+-Sage<br>
+-Statistical Lab<br>
+-nexusBPM, una herramienta de automatización.<br>
+-RStudio<br>
+-Cantor21<br>
+-Editores e IDEs<br>
+Entre los editores de texto e IDEs con soporte para R se cuentan:<br>
+Bluefish,Crimson Editor, ConTEXT, Eclipse,Emacs (Emacs Speaks Statistics), Geany, jEdit,Kate,RStudio,RKWard,Syn, TextMate, Tinn-R, Vim, gedit, SciTE, WinEdt (R Package RWinEdt), notepad++ y Visual Studio. Sweave es un procesador de documentos que puede ejecutar código de R incrustado en código de LaTeX y para insertar código, resultados y gráficos en el documento escrito en LaTeX. LyX puede usarse para crear y compilar documentos desarrollados en Sweave. El paquete odfWeave es similar, generando documentos en el formato OpenDocument (ODF); extensiones en estado experimental también permiten generar documentos del tipo presentación u hoja de cálculo.<br>
+
+Lenguajes de script:<br>
+La funcionalidad de R puede ser invocada desde código desarrollado en otros lenguajes de script tales como Python (mediante RPy), Perl (mediante Statistics::R), Ruby y F#. También pueden desarrollarse scripts en R directamente usando littler33 o Rscript, que forma parte de la distribución básica de R desde la versión 2.5.0
+
+		 </p>
+				 
+		 <p class="p8"><strong>PARADIGMA</strong><br>
+		     Es multiparadigma: funcional, vectorial, imperativo, procedural, orientado a objetos.
+
+		     
+			    
+	     </p>
+			 
+		 <p class="p8"><strong>EJEMPLO DE PROGRAMA</strong><br>
+		 Elaboración de Mapas
+require(maps) # activación de librería<br>
+require(mapproj) # se usará para projection="polyconic"<br>
+# Cargar los datos<br>
+# unemp incluye datos para condados de los Estados Unidos continentales. Se excluyen Alaska, Hawaii, Puerto Rico, y pequeñas ciudades de Virginia<br>
+data(unemp) # Datos de desempleo<br>
+data(county.fips) # mapa de los condados<br>
+
+# Se define la paleta de colores. Escala de grises en este caso. En el original, rosas y magenta.<br>
+colors = c("#F1EEF6", "#D3D3D3", "#B9B9B9", "#787878", "#2E2E2E", "#111111") # Colores<br>
+unemp$colorBuckets &lt;- as.numeric(cut(unemp$unemp, c(0, 2, 4, 6, 8, 10, 100))) # Rangos de desempleo<br>
+leg.txt &lt;- c("&lt;2%", "2-4%", "4-6%", "6-8%", "8-10%", ">10%") # Etiquetas de los rangos<br>
+
+# Se alinean los datos con definiciones de mapa (parciales) de emparejamientos de estados,<br>
+# nombre de condados, que incluyen varios polígonos para algunos condados<br>
+cnty.fips &lt;- county.fips$fips[match(map("county", plot=FALSE)$names, county.fips$polyname)]<br>
+colorsmatched &lt;- unemp$colorBuckets [match(cnty.fips, unemp$fips)]<br>
+# Se dibuja el mapa. Luego se guarda en JPEG.<br>
+jpeg("desempleo Estados Unidos 2009.jpg", width = 1024, height=750) # Crea imagen de 1024 x 750 pixeles.<br>
+map("county", col = colors[colorsmatched], fill = TRUE, resolution = 0, lty = 0, projection = "polyconic") # Mapa general del desempleo en grises<br>
+map("state", col = "white", fill = FALSE, add = TRUE, lty = 1, lwd = 0.2, projection="polyconic") # Mapa de los estados sobre puesto<br>
+title(main="Desempleo por condado, año 2009", cex.main = 3,<br>
+sub="Creado con información de la solución de J del 'Choropleth Challenge'<br>
+
+# Se creó el título del mapa<br>
+legend("top", leg.txt, horiz = T, fill = colors, bg="#F1F1F1", cex=1.5) # Indicación de los colores por su rango<br>
+map.axes() # Para colocar ejes con la latitud y <br>
+dev.off()
+		     
+			 
+		 </p>
+			 
+			 
+			 
+			 
+			 
+			 </center>
+			
+			</p>
+			 </div>   
+			 <center>
+				<a class="per" href="Tarea6.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+				<a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea8.html">Siguiente »</a>	
+			 </center>
+   
+   </body>
+</html>

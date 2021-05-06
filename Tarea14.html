@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Busqueda en Matriz</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost14.css">
+   </head>
+   <body>
+      <center><h1>Busqueda en Matriz</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Busqueda en Matriz</strong></h2>
+			    
+				
+     <p class="texto3">
+	     Ingresa un numero para saber si se encuentra en la matriz y cuantas veces se encuentra.
+	     
+	 </p>
+			 <pre>
+<p class="p1">
+<em><strong>JAVA</strong><br>
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class Tarea_14{
+     public static void main (String[]args){
+	 String entrada;
+	 String game="";
+	 int respuesta;
+	 do{
+	 String elementos;
+	 String letrero="";
+	 int fil,col,i,j,valores,b,num=0;
+	 
+	 JOptionPane.showMessageDialog(null,"Busqueda en Matriz.");
+	 
+	 entrada=JOptionPane.showInputDialog("Ingresar el numero de filas");
+	 fil=Integer.parseInt(entrada);
+	 entrada=JOptionPane.showInputDialog("Ingresar el numero de columnas");
+	 col=Integer.parseInt(entrada);
+	 int a[][]=new int[fil][col];
+	 
+	     for(i=0;i&lt;fil;i++){
+			 for(j=0;j&lt;col;j++){
+			     elementos=JOptionPane.showInputDialog("Elemento de la posicion ["+i+"]["+j+"]:");
+				 valores=Integer.parseInt(elementos);
+				 a[i][j]=valores;
+			 }
+		 }
+		 for(i=0;i&lt;fil;i++){
+			 for(j=0;j&lt;col;j++){
+				 letrero=letrero+"["+a[i][j]+"]   \t";
+			 }
+			 letrero=letrero+"\n";
+		 }
+		 entrada=JOptionPane.showInputDialog("Valor a buscar:");
+		 b=Integer.parseInt(entrada);
+		 for(i=0;i&lt;fil;i++){
+			 for(j=0;j&lt;col;j++){
+				 if(b==a[i][j]){
+					 num=num+1;
+				 }
+			 }
+		 }
+		 JOptionPane.showMessageDialog(null,"El numero "+b+" aparece "+ num+" veces en la matriz: \n"+letrero);
+		 
+		     game="";
+	         game=game+"1. Volver realizar\n";
+	         game=game+"2. Finalizar\n";
+	         game=JOptionPane.showInputDialog(game+"Que desea realizar: ");
+	         respuesta=Integer.parseInt(game);
+	         }while(respuesta==1);
+			 
+		 
+} //Fin de main
+} //Fin clase
+			 </pre>
+				 </em>
+		 </p>
+			 <pre>
+			     <p class="p2"><em><strong>RUBY</strong><br>
+puts ("Busqueda en Matriz.")
+
+begin
+
+print ("Ingrese el numero de filas: ")
+    fil=gets().to_i
+print ("Ingrese el numero de columnas: ")
+    col=gets().to_i
+
+a=Array.new(fil){Array.new(col)}
+
+   for i in(0...fil)
+       for j in(0...col)
+	      print ("Ingresa el valor de la posicon #{[i]}#{[j]}: ")
+	         a[i][j]=gets().to_i
+	   end
+   end
+ 
+letrero=""
+   for i in(0...fil)
+       for j in(0...col)
+	       letrero=letrero+a[i][j].to_s+"  "
+	    end
+	       letrero=letrero+"\n"
+   end
+
+begin
+
+   num=0
+   print ("\tValor a buscar: ")
+       x=gets().to_i
+   for i in(0...fil)
+      for j in(0...col)
+	     if (x==a[i][j])
+		    num+=1
+		 end	
+	  end   	
+   end  	
+    
+    puts ("El numero #{x} aparece #{num} veces")
+    puts (letrero)
+
+      print "\nDesea buscar otro valor. \n\tOpcion 1. Si:\n\tOpcion 2. No:  "
+      respuesta=gets().to_i
+   end while respuesta==1	
+   
+      print "\nDesea realizarlo otra vez. \n\tOpcion 1. Si\n\tOpcion 2. Finalizar:  "
+      respuesta=gets().to_i
+   end while respuesta==1
+			
+</pre>
+			</em></p>
+			 </div>   
+			 <center>
+			   
+				<a class="per" href="Tarea13.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+			   <a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea15.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>

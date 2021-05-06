@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Serie C</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost12.css">
+   </head>
+   <body>
+      <center><h1>Serie C</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Serie C</strong></h2>
+			   
+				
+     <p class="texto3">
+	         
+	Construya un programa en JAVA y RUBY. Que calcule e imprima la siguiente serie para los N primeros  términos: 2, ─ 3, ─ 5, ─ 7 , 4 , 6, ─ 9, ─ 11, ─ 13, 8, 10, 12, -15, -17, -19, 14, . . . .
+
+		
+			 
+	 </p>
+			 
+		 <p class="p1">
+		 <em><strong>JAVA</strong><br>
+<br>import javax.swing.JOptionPane;
+<br>public class Tarea_12{
+<br>public static void main(String[]args){
+        <br>String game="";
+		<br>int respuesta;
+		<br>do{
+		<br><br>int n, i, j, x, pos, neg, opcion;
+		<br>String entrada;
+			<br>i=2; x=2;
+	    <br>String letrero="";
+			<br><br>entrada= JOptionPane.showInputDialog("Ingrese la cantidad de numeros deseada");
+			<br>n=Integer.parseInt(entrada);
+      <br>if(n>0){
+				<br>pos= 2; 
+				<br>neg= -3; 
+				<br>letrero= letrero+pos;
+				<br>while(i<=n){
+					<br>for(j=1;j<=3;j++){ 
+						<br>if(i<=n){ 
+							<br>letrero= letrero+", "+neg;
+							<br>neg-=2;
+							<br>i++;
+						} 
+					} 
+					<br>for(j=1;j<=x;j++){ 
+						<br>if(i<=n){ 
+							<br>pos=pos+2;
+							<br>letrero= letrero+", "+pos;
+							<br>i++;
+						} 
+					}
+					<br>x++; 
+				} 
+			<br>}else{  
+        <br>letrero="0";
+      } 
+     <br><br>JOptionPane.showMessageDialog(null,"La sucesion es:\n"+letrero+".");
+	 
+		     <br><br> game="";
+	         <br> game=game+"1. Volver realizar\n";
+	         <br> game=game+"2. Finalizar\n";
+	         <br> game=JOptionPane.showInputDialog(game+"Que desea realizar: ");
+	         <br> respuesta=Integer.parseInt(game);
+	         <br> while(respuesta==1);
+	  
+<br><br>}//Fin de main
+<br><br>}//Fin clase		 
+
+				 </em>			 
+		 </p>
+<pre> 
+<p class="p2"><em><strong>RUBY</strong>
+  <br>puts "Serie C"<br>
+  begin<br>
+  i= 2
+  x= 2
+  print("Ingrese el total de numeros de la serie: ")
+  n= gets().to_i
+  letrero=""
+  if(n>0) then
+    positivo= 2 
+    negativo=-3 
+    letrero= letrero+"#{positivo}"
+			while (i<=n)
+			for j in(1..3) 
+        if(i<=n) then 
+          letrero= letrero+", #{negativo}"
+          negativo-=2
+          i+=1
+        end 
+				end 
+				for j in(1..x) 
+        if (i<=n) then 
+          positivo+=2
+          letrero= letrero+", #{positivo}"
+          i+=1
+        end 
+				end 
+      x+=1
+			end 
+			else 
+			letrero= "0"
+	end 
+	print("\nLa sucesion de números va:\n"+letrero+".")
+	
+	 print "\nDesea realizarlo otra vez. \n1.Si:\n2.No: "
+      respuesta=gets().to_i
+end while respuesta==1
+	
+	
+           </pre>	 
+			</em>
+			 </div>   
+			 <center>
+			
+				<a class="per" href="Tarea11.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+				<a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea13.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>

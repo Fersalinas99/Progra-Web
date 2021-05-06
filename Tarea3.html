@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Prolog</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost3.css">
+   </head>
+   <body>
+      <center><h1>Prolog</h1></center>
+   
+         <div class="texto2">
+             <img class="img7" src="imagenes/t3-1.jpg"><h2><strong>Prolog</strong></h2>
+			    <p class="texto3">Prolog (o PROLOG), proveniente del francés PROgrammation en LOGique, es un lenguaje de programación lógico e interpretado usado habitualmente en el campo de la Inteligencia artificial.</p><br>
+			 
+			
+			     
+				 <p class="p1"><strong>SÍMBOLOS Y SINTAXIS</strong><br>
+				 
+				     Prolog cuenta con operadores para la unificación y comparación, sea con evaluación o sea simbólica, como los siguientes:
+				     X is Y %unificación con evaluación.<br>
+			         X = Y %unificación simbólica.<br>
+			         X=:=Y %comparación con evaluación<br>
+			         X == Y %comparación simbólica.
+				 </p>
+			 
+			     <p class="p2">
+				 
+				     Existen dos tipos de cláusulas: Hechos y Reglas. Una regla es del tipo:
+                     <br>Cabeza :- Cuerpo.
+				 </p>
+			    
+				<p class="p3">
+				    
+					 Las cláusulas sin cuerpo (es decir, antecedente) son llamados hechos porque siempre son ciertos. 
+			         Un ejemplo de un hecho es:<br>
+			         gato(tom).<br>
+			         que es equivalente a la regla:<br>
+			         gato(tom) :- true.<br>
+				 </p>
+			
+			     <p class="p4">
+				 
+				     El predicado predefinido <strong>true/0</strong> siempre es verdad. Dado el hecho anterior, se puede preguntar:
+                     ¿Es Tom un gato?<br>
+					 ?- gato(Tom).<br>
+			         Yes<br>
+			         ¿Qué cosas son gatos?<br>
+			         ?- gato(X).<br>
+			         X = Tom<br>
+				 </p>
+		     
+			     <p class="p5">
+				 
+				     Las variables son cadenas de letras, dígitos y el signo '_'. Estas empiezan con una letra mayúscula o el símbolo '_':
+			         X<br>
+				     Objeto2<br>
+				     _23<br>
+				     Resultado<br>
+				     _x23<br>
+				 </p>
+			 
+			
+			
+			<p class="p9"><strong>ESQUELETO</strong><br><br>
+			 
+			         <em>?- escribeHolaMundo.<br>
+                         ¡Hola Mundo!<br>
+						 true.</em>
+			 </p>
+			 
+		     
+			     <p class="p6"><strong>REQUISITOS PARA EDITAR Y EJECUTAR</strong><br>
+				 
+				     <strong>SWI-Prolog</strong> es una implementación en código abierto (en inglés, open source) del lenguaje de programación Prolog. Su autor principal es Jan Wielemaker. En desarrollo ininterrumpido desde 1987, SWI-Prolog posee un rico conjunto de características, bibliotecas (incluyendo su propia biblioteca para GUI, XPCE), herramientas (incluyendo un IDE) y una documentación extensiva. SWI-Prolog funciona en las plataformas Unix, Windows y Macintosh.
+				     <br>El <strong>GNU Prolog</strong> (también llamado gprolog) es un compilador con un ambiente interactivo de depuración para el lenguaje Prolog disponible para Unix, Windows y Mac OS X. También soporta algunas extensiones al Prolog incluyendo programación con restricciones sobre un dominio finito, parsing usando gramáticas cláusula definida, y una interface de sistema operativo. El compilador convierte el código fuente de Prolog en byte code que se puede ser interpretado por una máquina abstracta de Warren y convierte esto en código ejecutable independiente.
+				 </p>
+				 
+			 
+			 
+			 <p class="p7"><strong>PARADIGMA</strong><br>
+			 
+			     Prolog se enmarca en el paradigma de los lenguajes lógicos y declarativos, lo que lo diferencia enormemente de otros lenguajes más populares tales como Fortran, Pascal, C o Java.
+			 </p>
+
+			     
+				 
+				 <p class="p8"><strong>EJEMPLO DE PROGRAMA</strong><br>
+				 
+				     Factorial de un número
+				     <em>% La sintaxis es factorial(N, F) -> Factorial de N es F (el resultado se guarda en F)</em><br>
+				     factorial(0, 1).<br>
+				     factorial(1, 1).<br>
+				     factorial(N, F) :- N>0, N1 is N - 1, factorial(N1, F1), F is N * F1.<br>
+				 <em>%el factorial se llama recursivamente dejando el resultado en F</em>
+				 </p>
+			 
+			
+			</p>
+			 </div>   
+			 <center>
+				
+				<a class="per" href="Tarea2.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+			    <a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea4.html">Siguiente »</a>
+		 </center>
+   
+   </body>
+</html>

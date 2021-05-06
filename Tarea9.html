@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Conversion a monedas</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost9.css">
+   </head>
+   <body>
+      <center><h1>Conversion a monedas</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Conversion a monedas</strong></h2>
+			    
+				
+     <p class="texto3">
+	         
+			 Programa en JAVA y RUBY que atraves de un menú de opciones permita convertir de pesos a las siguientes monedas: dolar, euro, yen, dolar HK. Nota: las equivalencias deberan definirse dentro del programa. El cuadro de dialogo para seleccionar que sea usando botones.
+	          
+	 </p>
+			<em> 
+		 <p class="p1">
+		 <strong>JAVA</strong><br>
+import javax.swing.JOptionPane;<br>
+import java.lang.System;<br>
+public class Tarea_9{<br>
+public static void main (String[]args){<br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;
+	   String entrada;<br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;
+	   String game="";<br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;
+	   int respuesta;<br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;
+	   do{<br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;
+	   double moneda,c;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	   double dolar=0.052;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+	   double euro=0.047;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	   double yen=5.7;<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  double dolarhk=0.41;<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  c=0;<br>
+	 &nbsp;&nbsp;&nbsp;&nbsp;
+	 String[] options={"DOLAR","EURO","YEN","DOLAR-HK","Cancelar"};<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;
+     int opcion=JOptionPane.showOptionDialog(null,"Selecciona un tipo de moneda", <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;"Numeros", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[4]);<br><br>
+	  	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 switch(opcion){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+			 case 0: <br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				JOptionPane.showMessageDialog(null,"1 Peso equivale a 0.052 Dolares");<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				entrada=JOptionPane.showInputDialog("Ingresa una cantidad en pesos mexicanos: ");<br>
+		         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 moneda=Double.parseDouble(entrada);<br>
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 c=moneda*dolar;<br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				JOptionPane.showMessageDialog(null,moneda+" MXN son "+c+" Dolares.");<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			break;<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			case 1: <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 JOptionPane.showMessageDialog(null,"1 Peso equivale a 0.047 Euros");<br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  entrada=JOptionPane.showInputDialog("Ingresa una cantidad en pesos mexicanos: ");<br>
+		      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  moneda=Double.parseDouble(entrada);<br>
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   c=moneda*euro;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				JOptionPane.showMessageDialog(null,moneda+" MXN son "+c+" Euros.");<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			break;<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			case 2: <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 JOptionPane.showMessageDialog(null,"1 Peso equivale a 5.70 Yenes");<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 entrada=JOptionPane.showInputDialog("Ingresa una cantidad en pesos mexicanos: ");<br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 moneda=Double.parseDouble(entrada);<br>
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   c=moneda*yen;<br>
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   JOptionPane.showMessageDialog(null,moneda+"MXN son "+c+" Yenes.");<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			break;<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			case 3: <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 JOptionPane.showMessageDialog(null,"1 Peso equivale a 0.41 Dolares HK");<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 entrada=JOptionPane.showInputDialog("Ingresa una cantidad en pesos mexicanos: ");<br>
+		       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   moneda=Double.parseDouble(entrada);<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				c=moneda*dolarhk;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				JOptionPane.showMessageDialog(null,moneda+" MXN son "+c+" Dolar HK.");<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			break;<br><br>
+		 }<br><br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		     game="";<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game=game+"1. Volver realizar\n";<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game=game+"2. Finalizar\n";<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game=JOptionPane.showInputDialog(game+"Que desea realizar: ");<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 respuesta=Integer.parseInt(game);<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 }while(respuesta==1);<br><br>
+		 
+<br>} //Fin de main
+<br>} //Fin clase 
+			 
+				 
+		 </p>
+<pre>	 
+<p class="p2"><strong>RUBY</strong>
+puts ("Conversion de pesos mexicanos\n\n")
+
+begin
+
+print "\t Opcion 1. Dolar.\n\t Opcion 2. Euro.\n\t Opcion 3. Yen.\n\t Opcion 4. Dolar HK\n\nA que moneda deseas convertir: "
+    opcion=gets().to_f
+
+dolar=0.052
+euro=0.047
+yen=5.7
+dolarhk=0.41
+
+   case opcion
+      when 1
+	     puts ("1 Peso equivale a 0.052 Dolares")
+		 print ("Ingresa una cantidad en pesos mexicanos: ")
+		    moneda=gets().to_i
+		    c=moneda*dolar
+			   puts ("\t#{moneda} MXN son #{c} Dolares.")
+     
+      when 2
+	     puts ("1 Peso equivale a 0.047 Euros")
+		 print ("Ingresa una cantidad en pesos mexicanos: ")
+		    moneda=gets().to_i
+			c=moneda*euro
+			    puts ("\t#{moneda} MXN son #{c} Euros.")
+  
+      when 3
+	     puts ("1 Peso equivale a 5.7 yenes")
+		 print ("Ingresa una cantidad en pesos mexicanos: ")
+		    moneda=gets().to_i
+			c=moneda*yen
+			   puts ("\t#{moneda} MXN son #{c} Yenes.")
+  
+      when 4
+	     puts ("1 Peso equivale a 0.41 dolares HK")
+		 print ("Ingresa una cantidad en pesos mexicanos: ")
+		    moneda=gets().to_i
+			c=moneda*dolarhk
+			   puts ("\t#{moneda} MXN son #{c} Dolar HK.")
+  
+   else
+      puts ("Escribiste una opcion invalida\n")
+
+end
+   
+      print "\nDesea realizarlo otra vez. \n1.Si:\n2.No: "
+      respuesta=gets().to_i
+end while respuesta==1
+			</pre>	
+			</p>
+			</em>
+			 </div>   
+			 <center>
+			   <a class="per" href="Tarea8.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+				<a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea10.html">Siguiente »</a>	
+			 </center>
+   
+   </body>
+</html>

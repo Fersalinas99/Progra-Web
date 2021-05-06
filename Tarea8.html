@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Conversion de temperatura</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost8.css">
+   </head>
+   <body>
+      <center><h1>Conversion de temperatura</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Conversión de temperatura</strong></h2>
+			    
+				
+     <p class="texto3">
+	         Elabore un programa en JAVA y RUBY que mediante un menú de opciones permite calcular la conversión de escala de temperatura en °F y °C. Nota: el cuadro de dialogo para seleccionar que sea usando botones.			 
+	          
+	 </p>
+			 
+		 <p class="p1">
+		 <em><strong>JAVA</strong><br><br>
+		     import javax.swing.JOptionPane;<br>
+             import java.lang.System;<br>
+             public class Tarea_8{<br>
+             public static void main (String[]args){<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;String temperatura;<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;double grados,t;<br>
+	         &nbsp;&nbsp;&nbsp;&nbsp;String[] options={"\u2109","\u2103","Cancelar"};<br>
+             &nbsp;&nbsp;&nbsp;&nbsp;int opcion=JOptionPane.showOptionDialog(null," A que temperatura a convertir",<br> 
+		     &nbsp;&nbsp;&nbsp;&nbsp;"Tipo de Temperatura", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[2]);<br><br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  String game="";<br>
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   do{<br><br>
+	  	  
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 switch(opcion){<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 case 0:temperatura=JOptionPane.showInputDialog("Ingresa la temperatura en \u2103: ");<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grados=Double.parseDouble(temperatura);<br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t=(grados*9/5)+32;<br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOptionPane.showMessageDialog(null,grados+"\u2103 son "+t+" \u2109");<br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 break;<br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 case 1:temperatura=JOptionPane.showInputDialog("Ingrese la temperatura \u2109: ");<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 grados=Double.parseDouble(temperatura);<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 t=(grados-32)*5/9;<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOptionPane.showMessageDialog(null,grados+"\u2109 son "+t+" \u2103");<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 break;<br><br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game="";<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game=game+"1. Volver realizar\n";<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game=game+"2. Finalizar\n";<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 game=JOptionPane.showInputDialog(game+"Que desea realizar: ");<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 respuesta=Integer.parseInt(game);<br>
+	          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 }while(respuesta==1);<br><br>
+		 
+		     }<br>
+             } //Fin de main<br>
+             } //Fin clase <br>
+		     </em>
+			 
+				 
+		 </p>
+			 <pre>
+<p class="p2"><em><strong>RUBY</strong><br>
+puts ("Conversion de temperatura")
+
+begin
+
+print "\n\tOpcion 1. °C a °F\n\tOpcion 2. °F a °C\n\nA que tipo de temperatura deseas convertir: "
+    opcion=gets().to_f
+
+case opcion
+    when 1
+        print "Ingresa tu temperatura en °C: "
+            grados=gets().to_f
+	            t=((grados*9/5)+32)
+	            puts (t)
+    when 2
+        print "Ingresa tu temperatura en °F: "
+	        grados=gets().to_f
+	            t=((grados-32)*5/9);
+	            puts (t)
+    else
+        puts ("Escribiste una opcion invalida")
+end
+   
+      print "\nDesea realizarlo otra vez. \n1.Si:\n2.No: "
+      respuesta=gets().to_i
+end while respuesta==1
+				 </pre>
+			</p>
+			 </div>   
+			 <center>
+			   <a class="per" href="Tarea7.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+				<a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea9.html">Siguiente »</a>
+					 </center>
+   
+   </body>
+</html>

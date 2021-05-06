@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <title>Serie A</title>
+   <meta charset="utf-8" >
+   <link rel="stylesheet" type="text/css" href="css/estilost10.css">
+   </head>
+   <body>
+      <center><h1>Serie A</h1></center>
+   
+         <div class="texto2">
+             <h2><strong>Serie A</strong></h2>
+			   
+     <p class="texto3">
+	         Cosntruya un programa en JAVA y RUBY que calcule e imprima la siguiente serie para los N primeros términos: 1, 8, 243, 16384, 1953125...
+	 </p>
+			<em> 
+		 <p class="p1">
+		 <strong>JAVA</strong><br>
+		         import javax.swing.JOptionPane;
+                 <br>
+				 import java.lang.Math;
+                 <br>
+				 public class SerieA{
+                 <br>
+				 public static void main (String[]args){
+	             <br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 String entrada;
+		         <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 String game="";
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 int respuesta;
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 do{
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 int n,x;
+			     <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 double i,num;
+			     <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				 String letrero="";
+			     <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 JOptionPane.showMessageDialog(null, "Seie A");
+			     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 entrada=JOptionPane.showInputDialog("Ingresar el total de numeros");   
+			     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 n=Integer.parseInt(entrada);
+				 <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 for(i=1;i<=n;i++){
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 num=Math.pow(i,(2*i-1));
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 x=(int)num;
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 if(i==n){
+			     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 letrero=letrero+x+".";
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 }else{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 letrero=letrero+x+", ";
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 }
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 }
+				 <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 JOptionPane.showMessageDialog(null, letrero);
+                 <br><br>
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 game="";
+	             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 game=game+"1. Volver realizar\n";
+	             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 game=game+"2. Finalizar\n";
+	             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 game=JOptionPane.showInputDialog(game+"Que desea realizar: ");
+	             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 respuesta=Integer.parseInt(game);
+	             <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 }while(respuesta==1);
+				 <br><br>
+				 
+				 } //Fin de main
+                 <br>
+				 } //Fin clase
+				 </em>
+			 
+				 
+		 </p>
+	<pre>	 
+<p class="p2"><strong>RUBY</strong>
+puts "Serie A"
+
+begin
+
+print ("Ingrese el total de numeros de la serie: ")
+    n=gets().to_i
+puts "\n"
+
+    for i in(1..n)
+        serie=(i**(2*i-1))
+	    letrero=""
+	    if (i==n)
+	        puts ("#{serie}.")
+	    else
+	        print ("#{serie}, ")
+	    end
+    end
+    
+	  print "\nDesea realizarlo otra vez. \n1.Si:\n2.No: "
+      respuesta=gets().to_i
+end while respuesta==1
+			</pre>	
+			</p>
+			</em>
+			 </div>   
+			 <center>
+			   
+				<a class="per" href="Tarea9.html">« Anterior</a>
+				<a class="per" href="index.html">Pagina principal</a>
+			   <a class="per" href="MenuTareas.html">Menu de Investigaciones y Codigo</a>
+				<a class="per" href="Tarea11.html">Siguiente »</a>
+			 </center>
+   
+   </body>
+</html>
